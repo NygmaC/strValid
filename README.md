@@ -18,26 +18,32 @@ is a option validation.
 - NumberAndSpecialCharacter    --> numbers and special character
 
 ## Example
+    import (
+        "fmt"
+        "github.com/NygmaC/strValid"
+    )
 
-textExample := "TextMatch10$@"
+    func main() {
 
-valid := strValid.ValidateAll(textExample)
+        textExample := "TextMatch10$@"
 
-print(valid)
+        valid := strValid.ValidateAll(textExample)
 
-//Options
-/*UpperCase
-Number
-UpperCaseAndNumber
-SpecialCharacter
-UpperCaseAndSpecialCharacter
-NumberAndSpecialCharacter*/
+        fmt.Println(valid)
+        
+        //Options
+        /*UpperCase
+        Number
+        UpperCaseAndNumber
+        SpecialCharacter
+        UpperCaseAndSpecialCharacter
+        NumberAndSpecialCharacter*/
 
-textExample = "Text2020"
-valid = strValid.IsValid(textExample, strValid.UpperCaseAndNumber)
+        textExample = "Text2020"
+        valid = strValid.IsValid(textExample, strValid.UpperCaseAndNumber)
 
-print(valid)
-
+        fmt.Println(valid)
+    }
 
 
 
